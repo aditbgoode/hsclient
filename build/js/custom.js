@@ -7296,10 +7296,10 @@ function init_echarts() {
                         $('#table_image_audio_f' + index).append('\
                             <div class="row">\
                               <div class="col-md-2">\
-                                ' + data.image + '\
+                                <a href="' + base_url_public + '/public/' + data.image + '">' + data.image + '</a>\
                               </div>\
                               <div class="col-md-2">\
-                                ' + data.audio + '\
+                                <a href="' + base_url_public + '/public/' + data.audio + '">' + data.audio + '</a>\
                               </div>\
                               <div class="col-md-8">\
                                 ' + new Date(data.ts * 1000) + '\
@@ -7320,10 +7320,10 @@ function init_echarts() {
                         $('#table_image_audio_m' + index).append('\
                             <div class="row">\
                               <div class="col-md-2">\
-                                ' + data.image + '\
+                                <a href="' + base_url_public + '/public/' + data.image + '">' + data.image + '</a>\
                               </div>\
                               <div class="col-md-2">\
-                                ' + data.audio + '\
+                                <a href="' + base_url_public + '/public/' + data.audio + '">' + data.audio + '</a>\
                               </div>\
                               <div class="col-md-8">\
                                 ' + new Date(data.ts * 1000) + '\
