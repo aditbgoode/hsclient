@@ -36,6 +36,7 @@ var checkIfPageIsExist = (pageName, csuccess, cerror) => {
     });
 }
 
+<<<<<<< HEAD
 $("#home_client").click(function(e){
     e.preventDefault();
     {
@@ -47,6 +48,12 @@ $("#log-f-20").click(function(e){
     e.preventDefault();
     checkIfPageIsExist("20_f.html", () => {
         window.location.href= "20_f.html?name=" + window.name + "&email=" + window.email + "&id=" + window.pubid
+=======
+$("#log-f-20").click(function(e){
+    e.preventDefault();
+    checkIfPageIsExist("20_f.html", () => {
+        window.location.href= "25_f.html?name=" + window.name + "&email=" + window.email + "&id=" + window.pubid
+>>>>>>> 4a1e3e8ddbf95efeef04ab00e8055d295605d777
     }, () => {
         alert("Error: page maybe doesn't exist");
     });
@@ -121,7 +128,11 @@ $("#log-f-55").click(function(e){
 $("#log-m-20").click(function(e){
     e.preventDefault();
     checkIfPageIsExist("20_m.html", () => {
+<<<<<<< HEAD
         window.location.href= "20_m.html?name=" + window.name + "&email=" + window.email + "&id=" + window.pubid
+=======
+        window.location.href= "25_m.html?name=" + window.name + "&email=" + window.email + "&id=" + window.pubid
+>>>>>>> 4a1e3e8ddbf95efeef04ab00e8055d295605d777
     }, () => {
         alert("Error: page maybe doesn't exist");
     });
@@ -6066,6 +6077,7 @@ function init_echarts() {
 		});
     }
 
+<<<<<<< HEAD
 //    if($('#table_image_audio_f3').length){
 //        $.ajax({
 //            url: base_url_public + "/all-data/" + window.pubid + "/26/30",
@@ -6088,6 +6100,30 @@ function init_echarts() {
 //            }
 //        });
 //    }
+=======
+    if($('#table_image_audio_f3').length){
+        $.ajax({
+            url: base_url_public + "/all-data/" + window.pubid + "/26/30",
+            success: function(ajaxresult) {
+                ajaxresult.female.files.reverse().forEach(function(data){
+                    $('#table_image_audio_f3').append('\
+                        <div class="row">\
+                          <div class="col-md-2">\
+                            ' + data.image + '\
+                          </div>\
+                          <div class="col-md-2">\
+                            ' + data.audio + '\
+                          </div>\
+                          <div class="col-md-8">\
+                            ' + new Date(data.ts * 1000) + '\
+                          </div>\
+                        </div>\
+                        <div>');
+                });
+            }
+        });
+    }
+>>>>>>> 4a1e3e8ddbf95efeef04ab00e8055d295605d777
 
     if ($('#echart_pie_m9').length) {
 
@@ -6207,6 +6243,7 @@ function init_echarts() {
             success: function(ajaxresult) {
 		        var echartPieF1 = echarts.init(document.getElementById('echart_pie_f1'), theme);
 
+<<<<<<< HEAD
 //                ajaxresult.female.files.forEach(function(data){
 //                    $('#table_image_audio_f1').append('\
 //                        <table>\
@@ -6221,6 +6258,22 @@ function init_echarts() {
 //                          </table>\
 //                          <hr>');
 //                });
+=======
+                ajaxresult.female.files.forEach(function(data){
+                    $('#table_image_audio_f1').append('\
+                        <table>\
+                              <thead>\
+                                  <!--<td>' + "Image: " + data.image + '</td>-->\
+                                  <!--<td>' + "Audio: " + data.audio + '</td>-->\
+                              </thead>\
+                              <tbody>\
+                                  <td><a href="' + base_url_public + '/public/' + data.image + '" target="_blank"><i class="fa fa-file-image-o" aria-hidden="true"></i></a></td>\
+                                  <td><a href="' + base_url_public + '/public/' + data.audio + '" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i></a></td>\
+                              </tbody>\
+                          </table>\
+                          <hr>');
+                });
+>>>>>>> 4a1e3e8ddbf95efeef04ab00e8055d295605d777
 
 		        echartPieF1.setOption({
 		            tooltip: {
@@ -6421,6 +6474,7 @@ function init_echarts() {
             success: function(ajaxresult) {
 		        var echartPieF3 = echarts.init(document.getElementById('echart_pie_f3'), theme);
 
+<<<<<<< HEAD
 //                ajaxresult.female.files.forEach(function(data){
 //                    $('#table_image_audio_f3').append('\
 //                        <table>\
@@ -6437,6 +6491,24 @@ function init_echarts() {
 //                          </table>\
 //                          <hr>');
 //                });
+=======
+                ajaxresult.female.reverse.files.forEach(function(data){
+                    $('#table_image_audio_f3').append('\
+                        <table>\
+                              <thead>\
+                                  <!--<td>' + "Date: " + data.date + '</td>-->\
+                                  <!--<td>' + "Image: " + data.image + '</td>-->\
+                                  <!--<td>' + "Audio: " + data.audio + '</td>-->\
+                              </thead>\
+                              <tbody>\
+                                  <td><' + base_url_public + '/public/' + data.date + '><i class="fa fa-calendar" aria-hidden="true"></i></a></td>\
+                                  <td><a href="' + base_url_public + '/public/' + data.image + '" target="_blank"><i class="fa fa-file-image-o" aria-hidden="true"></i></a></td>\
+                                  <td><a href="' + base_url_public + '/public/' + data.audio + '" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-play" aria-hidden="true"></i></a></td>\
+                              </tbody>\
+                          </table>\
+                          <hr>');
+                });
+>>>>>>> 4a1e3e8ddbf95efeef04ab00e8055d295605d777
 
 		        echartPieF3.setOption({
 		            tooltip: {
